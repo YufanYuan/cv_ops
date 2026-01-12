@@ -1,8 +1,8 @@
-# 通用简历生成器 (General Resume Generator)
+# 通用简历生成器 (CVOps Generator)
 
 [English](./README.md) | [中文](./README_CN.md)
 
-本项目是 [renderCV](https://github.com/rendercv/rendercv) 和 [CUE](https://cuelang.org/) 的工程化封装，旨在提供一种结构化、可编程的方式来生成高质量的简历。
+**CVOps** 是 [renderCV](https://github.com/rendercv/rendercv) 和 [CUE](https://cuelang.org/) 的工程化封装，旨在提供一种结构化、可编程的方式来生成高质量的简历。
 
 ## 核心优势 (Why this Wrapper?)
 

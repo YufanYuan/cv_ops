@@ -1,8 +1,8 @@
-# General Resume Generator
+# CVOps Generator
 
 [English](./README.md) | [中文](./README_CN.md)
 
-This project is an engineering wrapper around [renderCV](https://github.com/rendercv/rendercv) and [CUE](https://cuelang.org/), designed to provide a structured and programmable way to generate high-quality resumes.
+**CVOps** is an engineering wrapper around [renderCV](https://github.com/rendercv/rendercv) and [CUE](https://cuelang.org/), designed to provide a structured and programmable way to generate high-quality resumes.
 
 ## Why this Wrapper?
 
