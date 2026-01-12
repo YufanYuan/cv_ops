@@ -2,7 +2,15 @@
 
 [English](./README.md) | [中文](./README_CN.md)
 
-This project is an engineering wrapper around [renderCV](https://github.com/sinaatalay/rendercv) and [CUE](https://cuelang.org/), designed to provide a structured and programmable way to generate high-quality resumes.
+This project is an engineering wrapper around [renderCV](https://github.com/rendercv/rendercv) and [CUE](https://cuelang.org/), designed to provide a structured and programmable way to generate high-quality resumes.
+
+## Why this Wrapper?
+
+While `renderCV` is powerful, maintaining complex or multiple resumes in raw YAML can be repetitive and error-prone. This project offers a **battle-tested engineering template** that serves as a proven starting point for your resume:
+
+1.  **Logic > Config (CUE vs YAML)**: Use variables, loops, and schemas to enforce consistency. Define your education or contact info once and reuse it across multiple resume versions (e.g., English/Chinese, specialized roles) without copy-pasting.
+2.  **Engineering > Script**: Instead of manually managing Python versions and LaTeX dependencies, this repo provides a fully configured **Dev Container**. It just works.
+3.  **Systematic Design**: Strict separation of Content (`src/content`), Design (`src/design`), and Locale (`src/locale`) means you can change your layout or language without rewriting your life story.
 
 ## Setup
 
@@ -54,3 +62,21 @@ just build example_cn
    ```bash
    just build my_awesome_resume
    ```
+
+---
+
+## Vision & Roadmap: The "Agentic" Resume
+
+> **Goal:** High-quality mass application with minimized effort.
+
+We are evolving this project from a static generator into an **Agentic Career Assistant**. The core philosophy is to decouple your "Experience Data" from the "Resume View".
+
+### The Concept
+1.  **Atomic Assets**: You don't write a resume; you build a database of **Atomic Experiences**. Each experience is a structured data block (Context, Problem, Method, Result) stored in your `Experience Bank`.
+2.  **Dynamic Optimization**: When you apply for a job, you feed the **Job Description (JD)** and your **Experience Bank** into the Agent.
+3.  **Tailored Output**: The Agent selects the most relevant atomic experiences, rewrites them to match the keywords and tone of the JD, and assembles a perfectly tailored resume in an instant.
+
+### Why?
+- **For Generalists**: Highlight your technical depth for engineering roles and your leadership scope for management roles—using the same source of truth.
+- **For Freelancers**: Generate specific proposals/profiles for every different client requirement.
+- **For Everyone**: Break the trade-off between quantity (mass applying) and quality (tailored content).
