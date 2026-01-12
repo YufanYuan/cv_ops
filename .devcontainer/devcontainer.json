@@ -1,0 +1,50 @@
+{
+	"name": "Python Development with uv",
+	// Use Microsoft's Python 3 base image
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	// Features to add to the dev container
+	"features": {
+		// Install uv package manager
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/va-h/devcontainers-features/uv:1": {}
+	},
+	// Configure tool-specific properties
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				// Python development
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.debugpy",
+				// Linting and formatting
+				"charliermarsh.ruff",
+				"ms-python.black-formatter",
+				// Document viewing and markdown
+				"tomoki1207.pdf",
+				"bierner.markdown-mermaid",
+				"vscodevim.vim",
+				"cuelangorg.vscode-cue",
+				"trunk.io"
+			],
+			"settings": {
+				// Configure Python to use the uv-managed environment
+				"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+				// Black as default formatter, Ruff for linting
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.black-formatter",
+					"editor.formatOnSave": true,
+					"editor.codeActionsOnSave": {
+						"source.fixAll": "explicit",
+						"source.organizeImports": "explicit"
+					}
+				},
+				// Enable type checking
+				"python.analysis.typeCheckingMode": "basic"
+			}
+		}
+	},
+	// Run uv sync after container is created to install dependencies
+	"postCreateCommand": "bash ./.devcontainer/post-create.sh"
+	// Comment this in if you want to connect as a non-root user
+	// "remoteUser": "vscode"
+}
