@@ -8,6 +8,11 @@ description: Generate a tailored CUE resume from a JD file and the master data i
 ## When to use
 Use this skill when a user provides a job description (JD) file and wants a tailored resume CUE file generated under `cue-src/content/generated/`.
 
+## Prerequisites
+- Run `./configure.sh` once to install `cue`, `just`, and `uv` into `./.bin`.
+- Ensure the tools are on PATH for this session: `export PATH="$PWD/.bin:$PATH"`.
+- Install Python dependencies via `uv sync` (or `./.bin/uv sync` if PATH is not set).
+
 ## Inputs
 - `jd_path`: path to the JD file (txt/pdf/docx/image). If the file is binary or not readable as text, ask the user to provide a text version.
 - `target` (optional): target profile name. If omitted, infer a short role name from the JD and append `YYMMDDHHMM` timestamp (minute-level) for the output filename.

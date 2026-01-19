@@ -8,6 +8,11 @@ description: Audit a generated resume against master data and report PASS or FAI
 ## When to use
 Use this skill after a resume has been generated in `cue-src/content/generated/{target}.cue` and you need to verify it against the master data in `cue-src/details/`.
 
+## Prerequisites
+- Run `./configure.sh` once to install `cue`, `just`, and `uv` into `./.bin`.
+- Ensure the tools are on PATH for this session: `export PATH="$PWD/.bin:$PATH"`.
+- Install Python dependencies via `uv sync` (or `./.bin/uv sync` if PATH is not set).
+
 ## Inputs
 - `target`: target profile name (e.g. `google`).
 
