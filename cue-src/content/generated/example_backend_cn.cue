@@ -1,0 +1,120 @@
+package content
+
+import (
+	D "yufan.resume/design"
+	L "yufan.resume/locale"
+)
+
+example_backend_cn: #DocBase & {
+	_locale: "zh"
+	cv: {
+		name:     "Alex Chen"
+		location: "San Francisco, CA（远程 / 西雅图可协作）"
+		email:    "alex.chen@example.com"
+		phone:    "+14155551234"
+		social_networks: [
+			{
+				network:  "LinkedIn"
+				username: "alexchen-dev"
+				url:      "https://linkedin.com/in/alexchen-dev"
+			},
+			{
+				network:  "GitHub"
+				username: "alexcode"
+				url:      "https://github.com/alexcode"
+			},
+		]
+
+		sections: {
+			个人简介: [
+				"5+ 年分布式系统与基础设施经验，擅长 Go / Rust 在高吞吐、低延迟服务中的工程化落地；在 Kubernetes 大规模集群、可观测性（OpenTelemetry）、数据库分片与在线迁移、以及可靠性工程（限流/防级联故障）方面有可验证产出。"
+			]
+
+			教育背景: [
+				{
+					institution: "Stanford University"
+					area:        "Computer Science"
+					degree:      "Master of Science (M.S.)"
+					start_date:  "2018-09"
+					end_date:    "2020-06"
+					location:    "Stanford, CA"
+					highlights: [
+						"方向：Artificial Intelligence & Machine Learning",
+						"论文：Optimizing Large Language Model Inference on Edge Devices",
+						"助教：CS224n Natural Language Processing",
+					]
+				},
+				{
+					institution: "University of California, Berkeley"
+					area:        "Electrical Engineering & Computer Sciences (EECS)"
+					degree:      "Bachelor of Science (B.S.)"
+					start_date:  "2014-09"
+					end_date:    "2018-05"
+					location:    "Berkeley, CA"
+					highlights: [
+						"GPA: 3.9/4.0, Dean's List",
+						"Cal Hacks 2017 获奖项目：VisionAssist（开源）",
+					]
+				},
+			]
+
+			工作经验: [
+				{
+					company:    "CloudScale (Big Tech)"
+					position:   "Senior Backend Engineer（Core Infrastructure）"
+					start_date: "2020-07"
+					end_date:   "2022-12"
+					location:   "Seattle, WA"
+					summary:    "核心基础设施团队，负责高并发分布式系统、Kubernetes 平台能力、可观测性与关键数据系统的扩展与可靠性工程。"
+					highlights: [
+						"关键数据系统零停机迁移：为 50TB PostgreSQL 集群设计应用层分片方案，并基于 logical replication 执行在线迁移；最终将数据分片到 16 个实例，写入吞吐容量提升 10x。",
+						"PB 级/大规模持久化层扩展思路落地：围绕单写主瓶颈与 IOPS 约束，制定分片路由、数据重平衡与回滚策略，保障一致性与可用性目标。",
+						"可观测性升级：主导 OpenTelemetry 分布式追踪落地（service mesh sidecar 自动采集），实现跨 200+ 微服务端到端可视化；平均故障定位时间从 4 小时降至 30 分钟（MTTR -87.5%）。",
+						"可靠性工程（防级联故障）：实现基于 Redis + Lua 的分布式滑动窗口限流（原子性保证），在流量峰值期阻止 3 次重大级联故障扩散。",
+						"Kubernetes 大规模集群弹性：构建自定义 KEDA scaler（以请求速率“加速度”驱动伸缩，而非仅 CPU/内存），消除突增流量下扩容迟滞导致的 5xx，并每年节省闲置算力成本约 $2M。",
+						"高吞吐事件系统迁移（Go）：为 50k events/s 系统实施双写迁移与一致性对账工具；达成零停机/零数据丢失，跨地域复制延迟降低 60%。",
+						"API 工程标准化（gRPC/Protobuf）：建立集中式 Protobuf 仓库与代码生成流水线，推动 50+ 服务从 REST 迁移至 gRPC；平均 payload 降低 40%，序列化 CPU 降低 70%。",
+					]
+				},
+				{
+					company:    "NexusAI"
+					position:   "Senior AI Engineer / Tech Lead"
+					start_date: "2023-01"
+					end_date:   "present"
+					location:   "San Francisco, CA"
+					summary:    "负责核心平台/推理基础设施与服务化架构，强调低延迟、稳定性与可观测性；通过 gRPC 微服务拆分与 Kubernetes 集群部署支撑规模化业务。"
+					highlights: [
+						"以 gRPC 微服务重构推理核心：将原有紧耦合推理流程拆分为可插拔“Brain”架构，集成多模型服务（如 CLIP/Whisper）并通过 gRPC 调用，提升类型安全与跨团队协作效率。",
+						"在 Kubernetes 上自建向量数据库集群：将 RAG 检索从托管服务迁移至自建 Qdrant（HNSW + quantization），在 100M+ 向量规模下将检索延迟从 500ms+ 降至 50ms，并降低基础设施成本 40%。",
+						"构建自动化评测与回归防护体系：建立 LLM-as-a-Judge 自动化评测流水线与 Golden Dataset，发布节奏从双周提升到每日，提前拦截推理质量回归。",
+						"可靠性提升：通过自愈反思循环与错误分类 DSL 降低长任务失败率（20% -> <2%），支撑 24/7 自动化运行。",
+					]
+				},
+			]
+
+			技能与专长: [
+				{
+					label:   "编程语言"
+					details: "Go（Golang）, Rust, Python, C++, TypeScript, SQL"
+				},
+				{
+					label:   "分布式系统 / 基础设施"
+					details: "Kubernetes（K8s）, Docker, gRPC/Protobuf, Kafka, OpenTelemetry（分布式追踪）, Redis, Terraform, 微服务架构"
+				},
+				{
+					label:   "数据库与一致性"
+					details: "PostgreSQL（分片、在线迁移、logical replication）, Redis（原子限流 Lua）, CAP/一致性与并发模型（工程实践）"
+				},
+				{
+					label:   "可靠性工程（SRE）"
+					details: "限流与防级联故障、故障定位与可观测性建设、零停机迁移策略（双写/对账/回滚）"
+				},
+			]
+
+			论文与发表: [
+				"Efficient Token Sampling Strategies for Real-time Agents（NeurIPS 2023 Workshop，2023）",
+				"Building Scalable Event-Driven Architectures with Go（Article，2021）",
+			]
+		}
+	}
+}

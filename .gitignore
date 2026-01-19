@@ -14,3 +14,15 @@ classic
 # engineeringresumes
 markdown
 rendercv_output
+
+# envs
+.env
+
+# fonts
+fonts/
+
+# external tools
+.external/
+
+# local binaries
+.bin/

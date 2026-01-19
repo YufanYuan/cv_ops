@@ -11,11 +11,7 @@ example_cn: #DocBase & {
 			{
 				network:  "LinkedIn"
 				username: "wangwei_example"
-			},
-			{
-				network:  "Behance"
-				username: "wangwei_example"
-			},
+			}
 		]
 
 		sections: {

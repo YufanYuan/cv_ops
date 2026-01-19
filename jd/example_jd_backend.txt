@@ -1,0 +1,20 @@
+Job Title: Senior Staff Backend Engineer (Infrastructure)
+Location: Remote / Seattle
+Company: Stripe / Uber Scale Tech Co.
+
+About the Role:
+We are building the next generation of our global financial infrastructure. We need an engineer who lives and breathes distributed systems, can debug complex race conditions in their sleep, and cares deeply about reliability at scale.
+
+Responsibilities:
+- Design and implement high-throughput, low-latency services using Go and Java.
+- Architect sharding and replication strategies for petabyte-scale persistence layers (PostgreSQL, Cassandra).
+- Improve system observability specifically around distributed tracing and metric aggregation.
+- Drive reliability engineering initiatives, including chaos testing and rate limiting strategies to prevent cascading failures.
+- Mentor senior engineers and define engineering standards for API design (gRPC/Protobuf).
+
+Requirements:
+- 5+ years of experience with distributed systems in a high-growth environment.
+- Expert knowledge of Go or Rust.
+- Deep understanding of database internals, concurrency models, and consistency guarantees (CAP theorem).
+- Experience managing Kubernetes clusters at scale (custom controllers, autoscaling).
+- Proven track record of zero-downtime migrations for critical data systems.
