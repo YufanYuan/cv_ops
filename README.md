@@ -73,9 +73,9 @@ Included skills:
 
 - `resume-generate`: read a JD and master data to produce `cue-src/content/generated/{target}.cue`.
 - `resume-audit`: verify generated resume claims against master data.
-- `resume-sync`: propose master data updates when new facts appear.
+- (Removed) `resume-sync`: master data sync is intentionally handled without an LLM for now.
 
-Example usage (Codex CLI/IDE): `$resume-generate`, `$resume-audit`, `$resume-sync`.
+Example usage (Codex CLI/IDE): `$resume-generate`, `$resume-audit`.
 
 ---
 

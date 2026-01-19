@@ -75,9 +75,9 @@ just build example_cn
 
 - `resume-generate`：读取 JD 与 Master Data，生成 `cue-src/content/generated/{target}.cue`。
 - `resume-audit`：审计生成简历中的事实是否全部来自 Master Data。
-- `resume-sync`：识别新增信息并输出建议的 Master Data 片段。
+-（暂不提供）`resume-sync`：Master Data 同步先不走 LLM 方案。
 
-使用方式示例（Codex CLI/IDE）：`$resume-generate` / `$resume-audit` / `$resume-sync`。
+使用方式示例（Codex CLI/IDE）：`$resume-generate` / `$resume-audit`。
 
 ---
 
