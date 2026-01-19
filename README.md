@@ -65,6 +65,20 @@ just build example_cn
 
 ---
 
+## Agent Skills (Multi-Agent Skills)
+
+This project uses a shared `skills/` directory to bundle Prompt + resources for coding agents. It is symlinked into common agent locations (`.codex/skills`, `.claude/skills`, `.cursor/skills`, `.gemini/skills`, `.agent/skills`, `.github/skills`) so different tooling can discover the same skills without duplication.
+
+Included skills:
+
+- `resume-generate`: read a JD and master data to produce `cue-src/content/generated/{target}.cue`.
+- `resume-audit`: verify generated resume claims against master data.
+- `resume-sync`: propose master data updates when new facts appear.
+
+Example usage (Codex CLI/IDE): `$resume-generate`, `$resume-audit`, `$resume-sync`.
+
+---
+
 ## Vision & Roadmap: The "Agentic" Resume
 
 > **Goal:** High-quality mass application with minimized effort.

@@ -65,6 +65,22 @@ just build example_cn
 
 ---
 
+## Agent Skills（多 Agent 共享技能目录）
+
+本项目采用共享 `skills/` 目录的形式：用 `SKILL.md`（Prompt）+ 资源文件（可选）组织技能，让不同 Coding Agents 直接加载并执行，不再依赖仓库内的 LLM 脚本。
+
+同时通过软链接映射到常见位置：`.codex/skills`、`.claude/skills`、`.cursor/skills`、`.gemini/skills`、`.agent/skills`、`.github/skills`，方便不同工具自动发现。
+
+已内置的技能：
+
+- `resume-generate`：读取 JD 与 Master Data，生成 `cue-src/content/generated/{target}.cue`。
+- `resume-audit`：审计生成简历中的事实是否全部来自 Master Data。
+- `resume-sync`：识别新增信息并输出建议的 Master Data 片段。
+
+使用方式示例（Codex CLI/IDE）：`$resume-generate` / `$resume-audit` / `$resume-sync`。
+
+---
+
 ## 未来愿景与规划：Agentic Resume
 
 > **核心目标：** 以最小的精力成本，实现高质量的批量投递 (High-quality mass application)。
