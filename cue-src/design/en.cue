@@ -1,7 +1,7 @@
 package design
 
 en: {
-	theme: "engineeringresumes"
+	theme: *"engineeringresumes" | string
 	page: {
 		size:          *"us-letter" | string
 		top_margin:    *"2cm" | string
@@ -80,12 +80,19 @@ en: {
 	sections: {
 		allow_page_break:              *true | bool
 		space_between_regular_entries: *"0.4cm" | string
+		space_between_text_based_entries: *"0.15cm" | string
+		show_time_spans_in: *[] | [...string]
 	}
 	entries: {
 		date_and_location_width: *"4.15cm" | string
 		space_between_columns:   *"0.1cm" | string
 		allow_page_break:        *true | bool
 		short_second_row:        *false | bool
+		side_space:              *"0cm" | string
+		summary: {
+			space_above: *"0.08cm" | string
+			space_left:  *"0cm" | string
+		}
 		highlights: {
 			bullet:                        *"•" | string
 			space_above:                   *"0.25cm" | string

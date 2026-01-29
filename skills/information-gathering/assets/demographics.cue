@@ -14,12 +14,10 @@ demographics: S.#Demographics & {
 		{
 			network:  "LinkedIn"
 			username: "alexchen-dev"
-			url:      "https://linkedin.com/in/alexchen-dev"
 		},
 		{
 			network:  "GitHub"
 			username: "alexcode"
-			url:      "https://github.com/alexcode"
 		}
 	]
 	website: "https://alexchen.io"

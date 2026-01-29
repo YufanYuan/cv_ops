@@ -1,9 +1,6 @@
 package content
 
-import (
-	D "yufan.resume/design"
-	L "yufan.resume/locale"
-)
+
 
 example_backend_cn: #DocBase & {
 	_locale: "zh"
@@ -16,12 +13,10 @@ example_backend_cn: #DocBase & {
 			{
 				network:  "LinkedIn"
 				username: "alexchen-dev"
-				url:      "https://linkedin.com/in/alexchen-dev"
 			},
 			{
 				network:  "GitHub"
 				username: "alexcode"
-				url:      "https://github.com/alexcode"
 			},
 		]
 

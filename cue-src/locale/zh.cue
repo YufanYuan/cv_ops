@@ -1,18 +1,20 @@
 package locale
 
 zh: {
-	language: *"zh" | string
-	phone_number_format: *"national" | string
-	page_numbering_template: *"NAME - Page PAGE_NUMBER of TOTAL_PAGES" | string
-	last_updated_date_template: *"" | string
-	date_template: *"YEAR年MONTH_ABBREVIATION" | string
-	month: *"月" | string
-	months: *"月" | string
-	year: *"年" | string
-	years: *"年" | string
-	present: *"至今" | string
-	to: *"–" | string
-	abbreviations_for_months: *[
+	language: *"mandarin_chineese" | "english" | "danish" | "french" | "german" | "hindi" | "indonesian" | "italian" | "japanese" | "korean" | "portuguese" | "russian" | "spanish" | "turkish"
+
+	// Preserving previous Chinese translations where appropriate
+	last_updated: *"" | string 
+	month:        *"月" | string
+	months:       *"月" | string
+	year:         *"年" | string
+	years:        *"年" | string
+	present:      *"至今" | string
+	
+	// Extra fields found in previous zh.cue but not explicitly strictly in Reference (optional but good to keep optional)
+
+
+	month_abbreviations: *[
 		"1月",
 		"2月",
 		"3月",
@@ -26,7 +28,8 @@ zh: {
 		"11月",
 		"12月",
 	] | [...string]
-	full_names_of_months: *[
+
+	month_names: *[
 		"一月",
 		"二月",
 		"三月",

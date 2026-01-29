@@ -1,122 +1,149 @@
 package design
 
 zh: {
-	theme: "engineeringresumes"
+	theme: *"engineeringresumes" | string
 	page: {
-		size:                   *"us-letter" | string
-		top_margin:             *"2cm" | string
-		bottom_margin:          *"2cm" | string
-		left_margin:            *"2cm" | string
-		right_margin:           *"2cm" | string
-		show_page_numbering:    *false | bool
-		show_last_updated_date: *true | bool
+		size:          *"us-letter" | string
+		top_margin:    *"2cm" | string
+		bottom_margin: *"2cm" | string
+		left_margin:   *"2cm" | string
+		right_margin:  *"2cm" | string
+		show_footer:   *false | bool
+		show_top_note: *false | bool
 	}
 	colors: {
-		text:                                 *"rgb(0, 0, 0)" | string
-		name:                                 *"rgb(0, 0, 0)" | string
-		connections:                          *"rgb(0, 0, 0)" | string
-		section_titles:                       *"rgb(0, 0, 0)" | string
-		links:                                *"rgb(0, 0, 0)" | string
-		last_updated_date_and_page_numbering: *"rgb(128, 128, 128)" | string
+		body:           *"rgb(0, 0, 0)" | string
+		name:           *"rgb(0, 0, 0)" | string
+		connections:    *"rgb(0, 0, 0)" | string
+		section_titles: *"rgb(0, 0, 0)" | string
+		links:          *"rgb(0, 0, 0)" | string
+		footer:         *"rgb(128, 128, 128)" | string
+		top_note:       *"rgb(128, 128, 128)" | string
 	}
-	text: {
-		font_family:                        *"Noto Sans SC" | string
-		font_size:                          *"10pt" | string
-		leading:                            *"0.6em" | string
+	typography: {
+		font_family: {
+			body:           *"Noto Sans SC" | string
+			name:           *"Noto Sans SC" | string
+			headline:       *"Noto Sans SC" | string
+			connections:    *"Noto Sans SC" | string
+			section_titles: *"Noto Sans SC" | string
+		}
+		font_size: {
+			body:           *"10pt" | string
+			name:           *"25pt" | string
+			headline:       *"10pt" | string
+			connections:    *"10pt" | string
+			section_titles: *"1.2em" | string
+		}
+		line_spacing:                       *"0.6em" | string
 		alignment:                          *"justified" | string
 		date_and_location_column_alignment: *"right" | string
+		small_caps: {
+			name:           *false | bool
+			headline:       *false | bool
+			connections:    *false | bool
+			section_titles: *false | bool
+		}
+		bold: {
+			name:           *false | bool
+			headline:       *false | bool
+			connections:    *false | bool
+			section_titles: *true | bool
+		}
 	}
 	links: {
-		underline:              *true | bool
-		use_external_link_icon: *false | bool
+		underline:               *true | bool
+		show_external_link_icon: *false | bool
 	}
 	header: {
-		name_font_family:                                     *"Noto Sans SC" | string
-		name_font_size:                                       *"25pt" | string
-		name_bold:                                            *true | bool
-		photo_width:                                          *"3.5cm" | string
-		vertical_space_between_name_and_connections:          *"0.7cm" | string
-		vertical_space_between_connections_and_first_section: *"0.7cm" | string
-		horizontal_space_between_connections:                 *"0.5cm" | string
-		connections_font_family:                              *"Noto Sans SC" | string
-		separator_between_connections:                        *"|" | string
-		use_icons_for_connections:                            *false | bool
-		alignment:                                            *"center" | string
+		alignment:        *"center" | string
+		photo_width:      *"3.5cm" | string
+		space_below_name: *"0.7cm" | string
+
+		connections: {
+			separator:                         *"|" | string
+			space_between_connections:         *"0.5cm" | string
+			show_icons:                        *false | bool
+			phone_number_format:               *"national" | string
+			hyperlink:                         *true | bool
+			display_urls_instead_of_usernames: *true | bool
+		}
+		space_below_headline:    *"0.7cm" | string
+		space_below_connections: *"0.7cm" | string
 	}
 	section_titles: {
-		type:                 *"with-parial-line" | string
-		font_family:          *"Noto Sans SC" | string
-		font_size:            *"16pt" | string
-		bold:                 *true | bool
-		small_caps:           *false | bool
-		line_thickness:       *"0.5pt" | string
-		vertical_space_above: *"0.55cm" | string
-		vertical_space_below: *"0.3cm" | string
-		line_type:            *"with-full-line" | string
+		type:           *"with_full_line" | string
+		line_thickness: *"0.5pt" | string
+		space_above:    *"0.55cm" | string
+		space_below:    *"0.3cm" | string
+	}
+	sections: {
+		allow_page_break:              *true | bool
+		space_between_regular_entries: *"0.4cm" | string
+		space_between_text_based_entries: *"0.15cm" | string
+		show_time_spans_in: *[] | [...string]
 	}
 	entries: {
-		date_and_location_width:          *"4.15cm" | string
-		left_and_right_margin:            *"0cm" | string
-		horizontal_space_between_columns: *"0.1cm" | string
-		vertical_space_between_entries:   *"0.4cm" | string
-		allow_page_break_in_sections:     *true | bool
-		allow_page_break_in_entries:      *true | bool
-		short_second_row:                 *false | bool
-		show_time_spans_in: []
+		date_and_location_width: *"4.15cm" | string
+		space_between_columns:   *"0.1cm" | string
+		allow_page_break:        *true | bool
+		short_second_row:        *false | bool
+		side_space:              *"0cm" | string
+		summary: {
+			space_above: *"0.08cm" | string
+			space_left:  *"0cm" | string
+		}
+		highlights: {
+			bullet:                        *"•" | string
+			space_above:                   *"0.25cm" | string
+			space_left:                    *"0cm" | string
+			space_between_items:           *"0.19cm" | string
+			space_between_bullet_and_text: *"0.3em" | string
+		}
 	}
-	highlights: {
-		bullet:                                        *"•" | string
-		top_margin:                                    *"0.25cm" | string
-		left_margin:                                   *"0cm" | string
-		vertical_space_between_highlights:             *"0.19cm" | string
-		horizontal_space_between_bullet_and_highlight: *"0.3em" | string
-		summary_left_margin:                           *"0cm" | string
-	}
-	entry_types: {
+	templates: {
+		footer:      *"NAME - Page PAGE_NUMBER of TOTAL_PAGES" | string
+		top_note:    *"Last updated in TODAY" | string
+		single_date: *"MONTH_ABBREVIATION YEAR" | string
+		date_range:  *"START_DATE – END_DATE" | string
+		time_span:   *"HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS" | string
+
 		one_line_entry: {
-			template: *"**LABEL:** DETAILS" | string
+			main_column: *"**LABEL:** DETAILS" | string
 		}
 		education_entry: {
-			main_column_first_row_template: *"**INSTITUTION**, DEGREE in AREA -- LOCATION" | string
-			degree_column_template:         *"" | string
-			degree_column_width:            *"1cm" | string
-			main_column_second_row_template: *"""
+			main_column: *"""
+				**INSTITUTION**, DEGREE in AREA -- LOCATION
 				SUMMARY
 				HIGHLIGHTS
 				""" | string
-			date_and_location_column_template: *"DATE" | string
+			date_and_location_column: *"DATE" | string
+			degree_column:            *"" | string
 		}
 		normal_entry: {
-			main_column_first_row_template: *"**NAME** -- **LOCATION**" | string
-			main_column_second_row_template: *"""
+			main_column: *"""
+				**NAME** -- **LOCATION**
 				SUMMARY
 				HIGHLIGHTS
 				""" | string
-			date_and_location_column_template: *"DATE" | string
+			date_and_location_column: *"DATE" | string
 		}
 		experience_entry: {
-			main_column_first_row_template: *"**POSITION**, COMPANY -- LOCATION" | string
-			main_column_second_row_template: *"""
+			main_column: *"""
+				**POSITION**, COMPANY -- LOCATION
 				SUMMARY
 				HIGHLIGHTS
 				""" | string
-			date_and_location_column_template: *"DATE" | string
+			date_and_location_column: *"DATE" | string
 		}
 		publication_entry: {
-			main_column_first_row_template: *"**TITLE**" | string
-			main_column_second_row_template: *"""
+			main_column: *"""
+				**TITLE**
+				SUMMARY
 				AUTHORS
 				URL (JOURNAL)
 				""" | string
-			main_column_second_row_without_journal_template: *"""
-				AUTHORS
-				URL
-				""" | string
-			main_column_second_row_without_url_template: *"""
-				AUTHORS
-				JOURNAL
-				""" | string
-			date_and_location_column_template: *"DATE" | string
+			date_and_location_column: *"DATE" | string
 		}
 	}
 }

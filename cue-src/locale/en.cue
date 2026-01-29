@@ -1,13 +1,14 @@
 package locale
 
 en: {
-	language: *"english" | string
+	language: *"english" | "danish" | "french" | "german" | "hindi" | "indonesian" | "italian" | "japanese" | "korean" | "mandarin_chineese" | "portuguese" | "russian" | "spanish" | "turkish"
 
-	month: *"month" | string
-	months: *"months" | string
-	year: *"year" | string
-	years: *"years" | string
-	present: *"present" | string
+	last_updated: *"Last updated in" | string
+	month:        *"month" | string
+	months:       *"months" | string
+	year:         *"year" | string
+	years:        *"years" | string
+	present:      *"present" | string
 
 	month_abbreviations: *[
 		"Jan",
@@ -23,6 +24,7 @@ en: {
 		"Nov",
 		"Dec",
 	] | [...string]
+
 	month_names: *[
 		"January",
 		"February",

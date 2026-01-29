@@ -38,10 +38,11 @@ Use this skill when a user provides a job description (JD) file and wants a tail
        D "yufan.resume/design"
        L "yufan.resume/locale"
      )
-     ```
-   - A single top-level object named `{target}: #DocBase & { ... }`.
+        - A single top-level object named `{target}: #DocBase & { ... }`.
 6. Ensure the output contains no fabricated metrics or claims not present in master data.
 7. Run `just compile {target}` to validate the generated output before reporting success.
+8. Fix the necessary errors and repeat step 7 until the output is valid.
+9. Always review and audit the generated resume to ensure it follows the master data and the JD.
 
 ## Output
 - Return the file path you wrote and a short summary of the tailored changes (no full CUE dump in chat).
